@@ -27,7 +27,7 @@ y
 y
 y
 yes
-A
+Y
 EOF
 echo 'install sukses'
 echo 'untuk username panel adalah : adm'
