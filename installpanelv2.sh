@@ -1,11 +1,12 @@
 
 
 # Minta input dari pengguna
+echo 'MADE BY FAIZ'
 read -p "Masukkan domain: " domain
 read -p "Masukkan Email: " email
 read -p "Masukkan Password Login: " password
 read -p "Masukkan Subdomain Panel: " subdomain
-read -p "Masukkan Domainnode: " domainnode
+read -p "Masukkan Domain node: " domainnode
 
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
 0
@@ -28,3 +29,5 @@ y
 yes
 A
 EOF
+echo 'install sukses'
+echo 'untuk username panel adalah : adm'
