@@ -5,4 +5,4 @@ BUTUH LICENSE/PW CHAT GUA
 
 Comand Run Install Thema
 
-bash <(curl https://raw.githubusercontent.com/aistore0/thema/main/install.sh)
+```bash <(curl https://raw.githubusercontent.com/aistore0/thema/main/install.sh)```

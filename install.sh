@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # Color
 BLUE='\033[0;34m'       
@@ -13,8 +13,8 @@ display_welcome() {
   echo -e "${YELLOW}[+] =============================================== [+]${NC}"
   echo -e "${GREEN}[+]                                                            [+]${NC}"
   echo -e "${BLUE}[+]                AUTO INSTALLER THEMA                [+]${NC}"
-  echo -e "${BLUE}[+]                  © FAIZ STORE                        [+]${NC}"
-  echo -e "${RED}[+]                                                            [+]${NC}"
+  echo -e "${BLUE}[+]                  © MADE BY FAIZ STORE              [+]${NC}"
+  echo -e "${RED}[+]                                                                [+]${NC}"
   echo -e "${YELLOW}[+] =============================================== [+]${NC}"
   echo -e ""
   echo -e "script ini di buat untuk mempermudah penginstalasian thema pterodactyle,"
@@ -38,14 +38,14 @@ install_jq() {
   sudo apt update && sudo apt install -y jq
   if [ $? -eq 0 ]; then
     echo -e "                                                       "
-    echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+    echo -e "${YELLOW}[+] ============================================ [+]${NC}"
     echo -e "${GREEN}[+]              INSTALL JQ BERHASIL                [+]${NC}"
-    echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+    echo -e "${YELLOW}[+] ============================================ [+]${NC}"
   else
     echo -e "                                                       "
-    echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+    echo -e "${YELLOW}[+] ============================================ [+]${NC}"
     echo -e "${RED}[+]              INSTALL JQ GAGAL                      [+]${NC}"
-    echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+    echo -e "${YELLOW}[+] ============================================ [+]${NC}"
     exit 1
   fi
   echo -e "                                                       "
@@ -62,7 +62,7 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "Base64" ]; then
+  if [ "$USER_TOKEN" = "FaizNoComment" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
     echo -e "${GREEN}WADUH GATAU KEY? BELI DLU${NC}"
@@ -79,12 +79,12 @@ check_token() {
 install_theme() {
   while true; do
     echo -e "                                                       "
-    echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+    echo -e "${YELLOW}[+] =========================================== [+]${NC}"
     echo -e "${BLUE}[+]                   SELECT THEME                  [+]${NC}"
-    echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+    echo -e "${YELLOW}[+] =========================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
-    echo "1. stellar (by fadhost)"
+    echo "1. stellar"
     echo "2. billing"
     echo "3. enigma"
     echo "x. kembali"
@@ -120,9 +120,9 @@ if [ -e /root/pterodactyl ]; then
   
 if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "                                                                   "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -137,9 +137,9 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================ [+]${NC}"
   echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================ [+]${NC}"
   echo -e ""
   sleep 2
   clear
@@ -147,9 +147,9 @@ if [ "$SELECT_THEME" -eq 1 ]; then
 
 elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -165,9 +165,9 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================ [+]${NC}"
   echo -e "${GREEN}[+]                  INSTALL SUCCESS                [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================ [+]${NC}"
   echo -e "                                                       "
   sleep 2
   clear
@@ -175,17 +175,17 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
 
 elif [ "$SELECT_THEME" -eq 3 ]; then
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "                                                                   "
 
     # Menanyakan informasi kepada pengguna untuk tema Enigma
-    echo -e "${YELLOW}Masukkan link wa (https://wa.me...) : ${NC}"
+    echo -e "${YELLOW}Masukkan link wa contoh https://wa.me/6285383056042 : ${NC}"
     read LINK_WA
-    echo -e "${YELLOW}Masukkan link group (https://.....) : ${NC}"
+    echo -e "${YELLOW}Masukkan link group contoh https://chat.whatsapp.com/Xxx : ${NC}"
     read LINK_GROUP
-    echo -e "${YELLOW}Masukkan link channel (https://...) : ${NC}"
+    echo -e "${YELLOW}Masukkan link channel contoh https://whatsapp.com/channel/xxx: ${NC}"
     read LINK_CHNL
 
     # Mengganti placeholder dengan nilai dari pengguna
@@ -207,9 +207,9 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================= [+]${NC}"
   echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================= [+]${NC}"
   echo -e ""
   sleep 5
 else
@@ -222,9 +222,9 @@ fi
 # Uninstall theme
 uninstall_theme() {
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "${BLUE}[+]                    DELETE THEME                 [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "                                                       "
   bash <(curl https://raw.githubusercontent.com/aistore0/thema/main/repair.sh)
   echo -e "                                                       "
@@ -239,9 +239,9 @@ install_themeSteeler() {
 #!/bin/bash
 
 echo -e "                                                       "
-echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+echo -e "${YELLOW}[+] =========================================== [+]${NC}"
 echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
-echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+echo -e "${YELLOW}[+] =========================================== [+]${NC}"
 echo -e "                                                                   "
 
 # Unduh file tema
@@ -270,9 +270,9 @@ sudo rm /root/C2.zip
 sudo rm -rf /root/pterodactyl
 
 echo -e "                                                       "
-echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+echo -e "${YELLOW}[+] ============================================ [+]${NC}"
 echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
-echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+echo -e "${YELLOW}[+] ============================================ [+]${NC}"
 echo -e ""
 sleep 2
 clear
@@ -281,9 +281,9 @@ exit 0
 }
 create_node() {
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================= [+]${NC}"
   echo -e "${BLUE}[+]                    CREATE NODE                     [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================= [+]${NC}"
   echo -e "                                                       "
   #!/bin/bash
 #!/bin/bash
@@ -390,9 +390,9 @@ sudo systemctl start wings
 }
 hackback_panel() {
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================ [+]${NC}"
   echo -e "${BLUE}[+]                    HACK BACK PANEL                 [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================ [+]${NC}"
   echo -e "                                                       "
   # Minta input dari pengguna
 read -p "Masukkan Username Panel: " user
@@ -410,9 +410,9 @@ $user
 $psswdhb
 EOF
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ========================================= [+]${NC}"
   echo -e "${GREEN}[+]                 AKUN TELAH DI ADD             [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ========================================= [+]${NC}"
   echo -e "                                                       "
   sleep 2
   
@@ -420,9 +420,9 @@ EOF
 }
 ubahpw_vps() {
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ======================================== [+]${NC}"
   echo -e "${GREEN}[+]                    UBAH PASSWORD VPS       [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ======================================== [+]${NC}"
   echo -e "                                                       "
 read -p "Masukkan Pw Baru: " pw
 read -p "Masukkan Ulang Pw Baru " pw
@@ -435,9 +435,9 @@ EOF
 
 
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ======================================== [+]${NC}"
   echo -e "${GREEN}[+]                 GANTI PW VPS SUKSES         [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ======================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
   
@@ -445,9 +445,9 @@ EOF
 }
 auto_installer() {
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================= [+]${NC}"
   echo -e "${GREEN}[+]            AUTO INSTALL PANEL + WINGS           [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] ============================================= [+]${NC}"
   echo -e "                                                       "
 read -p "Masukkan Nama " nama
 read -p "Masukkan Password " pw
@@ -489,9 +489,9 @@ EOF
 
 
   echo -e "                                                       "
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "${GREEN}[+]                  AUTO INSTALL SUKSE             [+]${NC}"
-  echo -e "${YELLOW}[+] =============================================== [+]${NC}"
+  echo -e "${YELLOW}[+] =========================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
   
@@ -504,19 +504,6 @@ check_token
 
 while true; do
   clear
-  echo  ████████████████████████████████████████████████████████████████████████████████████████████████████████████████
-echo █░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░█░░░░░░░░░░░░░░░░░░█░░░░░░██░░░░░░░░█░░░░░░██░░░░░░█░░░░░░░░██░░░░░░░░█
-echo █░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀▄▀░░██░░▄▀▄▀░░█
-echo █░░▄▀░░░░░░░░░░█░░▄▀░░░░░░▄▀░░█░░░░▄▀░░░░█░░░░░░░░░░░░▄▀▄▀░░█░░▄▀░░██░░▄▀░░░░█░░▄▀░░██░░▄▀░░█░░░░▄▀░░██░░▄▀░░░░█
-echo █░░▄▀░░█████████░░▄▀░░██░░▄▀░░███░░▄▀░░███████████░░░░▄▀░░░░█░░▄▀░░██░░▄▀░░███░░▄▀░░██░░▄▀░░███░░▄▀▄▀░░▄▀▄▀░░███
-echo █░░▄▀░░░░░░░░░░█░░▄▀░░░░░░▄▀░░███░░▄▀░░█████████░░░░▄▀░░░░███░░▄▀░░░░░░▄▀░░███░░▄▀░░██░░▄▀░░███░░░░▄▀▄▀▄▀░░░░███
-echo █░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░███░░▄▀░░███████░░░░▄▀░░░░█████░░▄▀▄▀▄▀▄▀▄▀░░███░░▄▀░░██░░▄▀░░█████░░░░▄▀░░░░█████
-echo █░░▄▀░░░░░░░░░░█░░▄▀░░░░░░▄▀░░███░░▄▀░░█████░░░░▄▀░░░░███████░░▄▀░░░░░░▄▀░░███░░▄▀░░██░░▄▀░░███████░░▄▀░░███████
-echo █░░▄▀░░█████████░░▄▀░░██░░▄▀░░███░░▄▀░░███░░░░▄▀░░░░█████████░░▄▀░░██░░▄▀░░███░░▄▀░░██░░▄▀░░███████░░▄▀░░███████
-echo █░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░░░▄▀░░░░█░░▄▀▄▀░░░░░░░░░░░░█░░▄▀░░██░░▄▀░░░░█░░▄▀░░░░░░▄▀░░███████░░▄▀░░███████
-echo █░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░███████░░▄▀░░███████
-echo █░░░░░░█████████░░░░░░██░░░░░░█░░░░░░░░░░█░░░░░░░░░░░░░░░░░░█░░░░░░██░░░░░░░░█░░░░░░░░░░░░░░███████░░░░░░███████
-echo ████████████████████████████████████████████████████████████████████████████████████████████████████████████████
   echo -e "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
   echo "2. Uninstall theme"
