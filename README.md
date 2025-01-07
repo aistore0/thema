@@ -8,3 +8,10 @@ Comand Run Install Thema
 ```bash
 bash <(curl https://raw.githubusercontent.com/aistore0/thema/main/install.sh)
 ```
+# liat them yang ada
+SELLAR
+BILLING
+ENIGMA
+ELYSIUM
+NEBULA
+# AKSES FREE YA
